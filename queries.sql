@@ -1,7 +1,6 @@
 -- This file is just for show which queries was used 
 USE python_json_schema;
 
--- Create tables
 CREATE TABLE rooms(
 id INT PRIMARY KEY,
 name VARCHAR(255) NOT NULL );
@@ -14,7 +13,7 @@ birthday DATE NOT NULL,
 room_id INT NOT NULL,
 FOREIGN KEY(room_id) REFERENCES rooms(id));
 
--- Create indexes
+
 CREATE INDEX idx_room_id ON students(room_id);
 CREATE INDEX idx_birthday ON students(birthday);
 CREATE INDEX idx_sex ON students(sex);
